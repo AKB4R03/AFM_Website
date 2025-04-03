@@ -454,11 +454,9 @@ section {
 
 /* Background full gambar */
 .total-mahasiswa {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/jumlah.JPG) fixed center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/jumlah.JPG) center center;
   background-size: cover;
-  background-position: center top; /* atau center center */
-  background-repeat: no-repeat;
-  padding: 100px 0;
+  padding: 120px 0;
 }
 
 /* Button umum */

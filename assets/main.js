@@ -1,25 +1,30 @@
 $(document).ready(function () {
 
-  // fungsi tentang active nav-link
-  $(".navbar .nav-link").on("click", function () {
+  // Ini fungsinya untuk load navbar.html ke dalam #navbar-ppm
+  $("#navbar-ppm").load("components/navbar.html", function () {
+    const currentPath = window.location.pathname.split("/").pop();
+
+    // Bersihkan semua dulu
     $(".navbar .nav-link").removeClass("active");
-    $(this).addClass("active");
-  });
+    $(".dropdown-item").removeClass("active");
 
-  // tambah class "active" ketika bertemu dropdown
-  const currentPath = window.location.pathname.split("/").pop();
-  $(".navbar .nav-link, .dropdown-item").each(function () {
-    const linkPath = $(this).attr("href");
-    if (linkPath === currentPath) {
-      $(".navbar .nav-link, .dropdown-item").removeClass("active");
-      $(this).addClass("active");
-
-      // Tambahkan class active ke parent nav-item jika ini dropdown-item
-      const parentDropdown = $(this).closest(".dropdown");
-      if (parentDropdown.length) {
-        parentDropdown.find(".nav-link.dropdown-toggle").addClass("active");
+    // 1. Aktifkan nav biasa
+    $(".navbar .nav-link").each(function () {
+      const linkPath = $(this).attr("href");
+      if (linkPath === currentPath) {
+        $(this).addClass("active");
       }
-    }
+    });
+
+    // 2. Aktifkan dropdown
+    $(".dropdown-item").each(function () {
+      const linkPath = $(this).attr("href");
+      if (linkPath === currentPath) {        
+        $(this).addClass("active");
+        $(this).closest(".dropdown").find(".nav-link.dropdown-toggle").addClass("active");
+      }
+    });
+
   });
 
   // Animasi Fade down
@@ -59,7 +64,7 @@ $(document).ready(function () {
     }
     else {
       $(".navbar").css({
-        "background-color": "transparent", 
+        "background-color": "transparent",
         "box-shadow": "none",
       });
       $(".back-to-top").removeClass("active");
