@@ -2,9 +2,13 @@ $(document).ready(function () {
 
   // Ini fungsinya untuk load navbar.html ke dalam #navbar-ppm
   $("#navbar-ppm").load("components/navbar.html", function () {
-    const currentPath = window.location.pathname.split("/").pop();
+    let currentPath = window.location.pathname;
 
-    // Bersihkan semua dulu
+    // Ambil hanya bagian terakhir dari path (file name). Udah di tes case dengan banyak skenario
+    // termasuk kalo nanti ada subfolder di dalam folder untuk mencari index.html
+    currentPath = currentPath.endsWith("/") ? "index.html" : currentPath.split("/").pop();
+
+    // Bersihkan semua dulu. Tujuannya biar ketika load pertama semua navbar dan dropdown item ga aktif
     $(".navbar .nav-link").removeClass("active");
     $(".dropdown-item").removeClass("active");
 
@@ -27,6 +31,10 @@ $(document).ready(function () {
 
   });
 
+  // Memunculkan footer disemua halaman
+  $("#footer-ppm").load("components/footer.html");
+
+
   // Animasi Fade down
   // $(window).scroll(function () {
   //   const element = document.querySelector('.fade-down-in-on-scroll');
@@ -38,7 +46,7 @@ $(document).ready(function () {
   //   }
   // });
 
-  // Animasi card
+  // Animasi card yang pop-up ketika kita nge scroll
   $(window).scroll(function () {
     const cards = document.querySelectorAll('.card');
     const screenPosition = window.innerHeight / 1.3;
@@ -52,7 +60,7 @@ $(document).ready(function () {
     });
   });
 
-  // fungsi tentang turn on bg di navbar dan adanya tombol back-to-top. Dan juga kasih shadow kalo scroll
+  // Fungsi tentang turn on background color di navbar dan adanya tombol back-to-top. Dan juga kasih shadow kalo scroll
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
     if (scroll > 50) {
@@ -71,26 +79,10 @@ $(document).ready(function () {
     }
   });
 
-  // fungsi tentang menutup navbar setelah klik a link
+  // Fungsi tentang menutup navbar setelah klik a link (offcanvas)
   $("#offcanvasDarkNavbar a").click(function () {
     if (!$(this).hasClass("dropdown-toggle")) {
       $('.offcanvas').offcanvas('hide');
     }
   });
-
-  // fungsi tentang navbar hide onscroll
-  // if ($(".smart-scroll").length > 0) {
-  //   var last_scroll_top = 0;
-  //   $(window).on("scroll", function () {
-  //     var scroll_top = $(this).scrollTop();
-  //     if (scroll_top < last_scroll_top) {
-  //       $(".smart-scroll").removeClass("scrolled-down").addClass("scrolled-up");
-  //     }
-  //     else {
-  //       $(".smart-scroll").removeClass("scrolled-up").addClass("scrolled-down");
-  //     }
-  //     last_scroll_top = scroll_top;
-  //   });
-  // }
-
 });
