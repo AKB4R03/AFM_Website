@@ -13,11 +13,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
-  <!-- OrgChart.js CDN -->
-<link href="https://cdn.balkangraph.com/js/latest/OrgChart.css" rel="stylesheet" />
-
-<script src="https://cdn.balkan.app/orgchart.js"></script>
-
   <!-- Main CSS -->
   <link href="assets/style.css" rel="stylesheet">
 
@@ -67,11 +62,10 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item fs-14" href="structure.html">Management Structure</a></li>
-                  <li><a class="dropdown-item fs-14" href="#">Teachers Council</a></li>
                   <li>
                     <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item fs-14" href="#">Divisions</a></li>
+                  <li><a class="dropdown-item fs-14" href="divisions.html">Divisions</a></li>
                 </ul>
               </li>
 
@@ -103,18 +97,89 @@
   <main>
     <section class="d-flex justify-content-center align-items-center py-5 text-center"
       style="height: 100vh; background-image: url(assets/img/structure/pengurus.jpg); background-size: cover; background-position: center; position: relative;">
-      <div class="container">
-        <!-- <h1 class="poppins-bold">Struktur Organisasi & Dewan Guru</h1>
-        <p class="poppins-regular text-muted">Susunan struktur pengurus PPM AFM dan para dewan guru yang membimbing
-          santri menuju kesuksesan dunia akhirat.</p> -->
-      </div>
     </section>
 
     <!-- Structure section -->
     <section class="py-5">
       <div class="container">
-        <h3 class="text-center mb-4 poppins-bold">Struktur Organisasi PPM AFM</h3>
-        <div id="tree" style="width:100%; height:600px; border: 2px solid red;"></div>
+        <h3 class="text-center mb-4 poppins-bold">Struktur Kepengurusan PPM AFM</h3>
+
+        <!-- Ketua -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <img src="assets/img/structure/pengurus-1.jpg" class="card-img-top" alt="Ketua">
+              <div class="card-body">
+                <h5 class="card-title poppins-bold">H. Dedy Renaldi S.T.</h5>
+                <p class="card-text text-muted poppins-regular">Pembina PPM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dewan Guru -->
+        <h5 class="mb-4 poppins-bold">Dewan Guru</h5>
+        <div class="row justify-content-center mb-5">
+
+          <div class="col-md-4 mb-3">
+            <div class="card shadow-sm h-100">
+              <img src="assets/img/structure/degur-1.jpg" class="card-img-top" alt="Dewan Guru 1">
+              <div class="card-body">
+                <h6 class="card-title poppins-bold">H. Ustadz Prakash Faqih Arifin</h6>
+                <p class="card-text text-muted poppins-regular">Dewan Guru</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card shadow-sm h-100">
+              <img src="assets/img/structure/degur-2.jpg" class="card-img-top" alt="Dewan Guru 2">
+              <div class="card-body">
+                <h6 class="card-title poppins-bold">H. Ustadz Bachruddin</h6>
+                <p class="card-text text-muted poppins-regular">Dewan Guru</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card shadow-sm h-100">
+              <img src="assets/img/structure/degur-3.jpg" class="card-img-top" alt="Dewan Guru 1">
+              <div class="card-body">
+                <h6 class="card-title poppins-bold">H. Ustadz M. Sulthon Aulia</h6>
+                <p class="card-text text-muted poppins-regular">Dewan Guru</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card shadow-sm h-100">
+              <img src="assets/img/structure/degur-4.jpg" class="card-img-top" alt="Dewan Guru 1">
+              <div class="card-body">
+                <h6 class="card-title poppins-bold">Ustadz Anji Hidayat</h6>
+                <p class="card-text text-muted poppins-regular">Dewan Guru</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card shadow-sm h-100">
+              <img src="assets/img/structure/degur-5.jpg" class="card-img-top" alt="Dewan Guru 1">
+              <div class="card-body">
+                <h6 class="card-title poppins-bold">Ustadz M. Ridho Asshidqi</h6>
+                <p class="card-text text-muted poppins-regular">Dewan Guru</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pamong -->
+        <h5 class="mb-4 poppins-bold">Pamong Putra dan Putri</h5>
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <div class="card shadow-sm">
+              <img src="assets/img/structure/pamong.jpg" class="card-img-top" alt="Pamong 1">
+              <div class="card-body">
+                <h6 class="card-title poppins-bold">Pamong</h6>                
+              </div>
+            </div>
+          </div>          
+        </div>
       </div>
     </section>
 
@@ -197,6 +262,7 @@
         }
       });
     });
+
   </script>
 </body>
 
