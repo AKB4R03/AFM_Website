@@ -378,6 +378,24 @@ section {
   animation-play-state: paused;
 }
 
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.masonry-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.masonry-grid img:hover {
+  transform: scale(1.03);
+}
+
 /* Bagian Location PPM */
 @media (max-width: 767.98px) {
 
