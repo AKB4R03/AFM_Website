@@ -23,7 +23,7 @@ $(document).ready(function () {
     // 2. Aktifkan dropdown
     $(".dropdown-item").each(function () {
       const linkPath = $(this).attr("href");
-      if (linkPath === currentPath) {        
+      if (linkPath === currentPath) {
         $(this).addClass("active");
         $(this).closest(".dropdown").find(".nav-link.dropdown-toggle").addClass("active");
       }
