@@ -34,7 +34,6 @@ $(document).ready(function () {
   // Memunculkan footer disemua halaman
   $("#footer-ppm").load("components/footer.html");
 
-
   // Animasi Fade down
   // $(window).scroll(function () {
   //   const element = document.querySelector('.fade-down-in-on-scroll');
