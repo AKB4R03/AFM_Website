@@ -7,11 +7,19 @@
   <title>PPM AFM</title>
 
   <!-- Favicons -->
-  <link href="assets/img/logo-ppm.png" rel="icon" sizes="16x16">
+  <link href="assets/img/logo-ppm.png" rel="icon" sizes="128x128">
 
   <!-- Bootstrap & Third Parties CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" media="print"
+    onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    media="print" onload="this.media='all'">
+
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 
   <!-- Main CSS -->
   <link href="assets/style.css" rel="stylesheet">
@@ -21,210 +29,233 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" media="print" onload="this.media='all'">
 
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
 
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar smart-scroll navbar-expand-lg fixed-top">
-      <div class="container">
+  <!-- Navigasi -->
+  <div id="navbar-ppm"></div>
 
-        <!-- Logo -->        
-        <a class="navbar-brand fs-18 d-flex align-items-center fw-500" style="color: white;" href="index.html">
-          <img src="assets/img/logo-ppm.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top me-2">
-          PPM Al-Faqih Mandiri
-        </a>
-
-        <!-- Nav Menu -->
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-          aria-labelledby="offcanvasDarkNavbarLabel" data-bs-target="#navbar-example">
-          <div class="offcanvas-header">
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-              aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active fs-14" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fs-14" aria-current="page" href="about.html">About AFM</a>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle fs-14" href="#" role="button" data-bs-toggle="dropdown">
-                  Structure
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item fs-14" href="structure.html">Management Structure</a></li>
-                  <li><a class="dropdown-item fs-14" href="#">Teachers Council</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item fs-14" href="#">Divisions</a></li>
-                </ul>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link fs-14" aria-current="page" href="facilities.html">Facilities</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fs-14" aria-current="page" href="article.html">Article</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fs-14" aria-current="page" href="controlling.html">Controlling</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Hamburger Btn -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-          aria-controls="offcanvasDarkNavbar" aria-expanded="false" aria-label="Toggle navigation"
-          style="border: 1px solid white;">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-      </div>
-    </nav>
-  </header>
-
+  <!-- Nama animasinya animated-section dan taronya di <div> di bawah inii (ada di style.css) -->
   <!-- class="animated-section" -->
-  <div >
+  <!-- Landing -->
+  <div>
     <section class="d-flex justify-content-center position-relative flex-column" style="height: 100vh;" id="home">
 
       <div class="overlay"></div>
-  
+
       <!-- Video Berjalan -->
       <video class="hero-video" id="video-berjalan" playsinline="playsinline" autoplay="autoplay" muted="muted"
-        loop="loop">
-        <source src="assets/video/ssft.mp4" type="video/mp4">
+        loop="loop" preload="none"
+        poster="https://ik.imagekit.io/caduqpa5t/about-thumb.png?updatedAt=1743726184619?tr=w-800,q-80">
+        <source src="https://ik.imagekit.io/caduqpa5t/about.mp4?updatedAt=1743740584692" type="video/mp4">
       </video>
-  
+
+      <!-- Fallback untuk mobile -->
+      <!-- <img src="https://ik.imagekit.io/caduqpa5t/about-thumb.png?updatedAt=1743726184619?tr=w-800,q-80" alt="Background"
+        class="hero-video" id="video-berjalan" /> -->
+
       <!-- Video Text -->
-      <div class="container align-items-center position-relative" style="z-index: 999;">
+      <div class="container text-center align-items-center position-relative" style="z-index: 999;">
         <div class="row justify-content-center">
           <div class="col-xl-8">
             <!-- fade-down-in -->
-            <h1 class=" text-white" style="font-family: 'Raleway', sans-serif; font-weight: 600;">About</h1>
+            <h1 class="fs-48 mb-3 text-white poppins-bold">Saat Nilai Bertemu Visi</h1>
+            <h2 class="fs-24 text-white poppins-medium">Temukan bagaimana AFM membentuk karakter, pengetahuan, dan
+              semangat menjadi pembawa perubahan di masa depan.</h2>
           </div>
         </div>
       </div>
     </section>
-  </div>  
+  </div>
 
   <!-- Contents -->
-  <main class="mt-5 pt-5">
-    <section class="container py-5">
-      <h2 class="text-center mb-5">About AFM</h2>
+  <main>
+    <section class="py-5 bg-light">
+      <div class="container text-center mb-5">
+        <h2 class="poppins-bold">Tentang AFM</h2>
+        <p class="poppins-regular text-muted">Gambaran sedikit tentang semua kegiatan di PPM AFM.</p>
 
-      <div class="mb-5">
-        <h4>Short Profile</h4>
-        <p>PPM Al-Faqih Mandiri (AFM) adalah lembaga pendidikan dan pengembangan karakter berbasis nilai-nilai keislaman yang berlokasi di Depok, Jawa Barat. Kami mengedepankan integrasi antara pendidikan akademik, spiritual, dan keterampilan sosial untuk mencetak generasi unggul.</p>
+        <div class="row mt-4" data-masonry='{"percentPosition": true }'>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <a data-fancybox="gallery" href="assets/img/about/img-1.JPG">
+              <img src="assets/img/about/img-1.JPG" class="img-fluid rounded" loading="lazy" />
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <a data-fancybox="gallery" data-caption="Kegiatan Pramuka AFM di Cibodas" href="assets/img/about/img-2.JPG">
+              <img src="assets/img/about/img-2.JPG" class="img-fluid rounded" loading="lazy" />
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <a data-fancybox="gallery" href="assets/img/about/img-3.JPG">
+              <img src="assets/img/about/img-3.JPG" class="img-fluid rounded" loading="lazy" />
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <a data-fancybox="gallery" href="assets/img/about/img-4.JPG">
+              <img src="assets/img/about/img-4.JPG" class="img-fluid rounded" loading="lazy" />
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <a data-fancybox="gallery" href="assets/img/about/img-5.JPG">
+              <img src="assets/img/about/img-5.JPG" class="img-fluid rounded" loading="lazy" />
+            </a>
+          </div>
+          <!-- Tambahkan lagi sesuai kebutuhan -->
+        </div>
       </div>
 
-      <div class="mb-5">
-        <h4>History</h4>
-        <p>Didirikan pada tahun 2019, AFM lahir dari keinginan untuk menghadirkan tempat tinggal dan pembinaan yang mendukung siswa menjadi insan yang berakhlak mulia, disiplin, serta siap menghadapi tantangan zaman. Sejak awal berdiri, AFM terus tumbuh dan berkembang menjadi lembaga yang dipercaya oleh masyarakat.</p>
+      <div class="container mb-5">
+        <div class="row d-flex align-items-stretch">
+          <div class="col-md-6">
+            <div class="p-3 border rounded h-100">
+              <h3 class="poppins-bold">Sejarah</h3>
+              <p class="poppins-regular text-muted">Pondok Pesantren Mahasiswa (PPM) Al-Faqih Mandiri adalah pondok
+                pesantren bagi para mahasiswa/i yang berkuliah di Depok dan sekitarnya serta memiliki tujuan untuk
+                mencetak sarjana yang profesional religius serta berperan aktif dalam perjuangan dan dakwah. Pondok
+                Pesantren Mahasiswa (PPM) Al-Faqih Mandiri berada di Kota Depok, Jawa Barat.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-3 border rounded h-100">
+              <p class="poppins-regular text-muted">Berdiri sejak tahun 2013, Pondok Pesantren Mahasiswa Al-Faqih
+                Mandiri telah dihuni oleh lebih dari 250 mahasiswa/i yang berasal dari berbagai wilayah di Indonesia.
+                Disebut
+                Pondok Pesantren Mahasiswa, karena mahasiswa/i tidak hanya mengejar ilmu keagamaan seperti pondok pada
+                umumnya, melainkan juga diwajibkan untuk menempuh pendidikan formal di perguruan tinggi sebagai salah
+                satu syarat diterimanya di Pondok Pesantren Mahasiswa (PPM) Al-Faqih Mandiri.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="mb-5">
-        <h4>Vision and Mission</h4>
-        <p><strong>Visi:</strong> Menjadi pusat pembinaan generasi muda yang mandiri, religius, dan berprestasi.</p>
-        <p><strong>Misi:</strong></p>
-        <ul>
-          <li>Menyelenggarakan pembinaan yang berbasis nilai-nilai keislaman dan nasionalisme.</li>
-          <li>Mengembangkan potensi santri dalam bidang akademik, sosial, dan spiritual.</li>
-          <li>Menciptakan lingkungan yang nyaman, aman, dan mendukung perkembangan karakter.</li>
-        </ul>
+
+      <div class="container mb-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="ratio ratio-16x9 rounded shadow">
+              <iframe class="rounded-4" width="560" height="315"
+                src="https://www.youtube.com/embed/j3pxqHaDph8?si=MGA8kUz1AkbxIvL7" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p class="mt-2 fst-italic">“Mencetak sarjana yang profesional religius serta berperan aktif dalam perjuangan
+              dan dakwah”<br><small>- H. Dedy Rinaldi S.T. - Pembina PPM AFM</small></p>
+          </div>
+
+          <div class="col-md-6">
+            <h3 class="poppins-bold">Tri Sukses Generus</h3>
+            <p class="poppins-regular text-muted">Target dari pembinaan PPM Al-Faqih Mandiri terhadap generasi muda
+              adalah Tri Sukses Generus, yaitu berakhlaqul karimah, alim faqih, dan mandiri. Untuk mencapai target
+              tersebut, maka dibangunlah Pondok Pesantren Mahasiswa Al-Faqih Mandiri.</p>
+            <!-- <blockquote class="blockquote text-muted fst-italic border-start ps-3">
+              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.”</p>
+            </blockquote> -->
+          </div>
+        </div>
       </div>
 
-      <div class="mb-5">
-        <h4>Annual Activity</h4>
-        <ul>
-          <li>Pesantren Ramadhan</li>
-          <li>Program Tahfidz dan Tadabbur Quran</li>
-          <li>Pelatihan Leadership dan Soft Skills</li>
-          <li>Sanlat, Rihlah, dan Kegiatan Pengabdian Masyarakat</li>
-        </ul>
+      <div class="container text-center">
+        <h3 class="poppins-bold mb-4">Visi & Misi PPM Al-Faqih Mandiri</h3>
+        <p class="poppins-regular text-muted mb-5">Pondok Pesantren Mahasiswa Al-Faqih Mandiri memiliki visi mencetak
+          generasi sarjana yang professional religius serta berperan aktif dalam
+          perjuangan dan dakwah, sarjana yang mubaligh, mubaligh yang sarjana. Adapun misi sebagai berikut:</p>
+        <div class="row g-4">
+
+          <!-- Row atas -->
+          <div class="col-md-4">
+            <div class="p-4 border rounded h-100">
+              <div class="mb-3"><i class="bi bi-house-fill fs-1"></i></div>
+              <h5 class="poppins-bold">Menyediakan sarana hunian dan lingkungan yang nyaman sebagai
+                tempat tinggal, belajar dan mengembangkan kepribadian. </h5>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 border rounded h-100">
+              <div class="mb-3"><i class="bi bi-gear-wide-connected fs-1"></i></div>
+              <h5 class="poppins-bold">Memfasilitasi mahasiswa untuk mencari dan mengamalkan ilmu agama dan dunia
+                sebanyak-banyaknya</h5>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 border rounded h-100">
+              <div class="mb-3"><i class="bi bi-lightbulb-fill fs-1"></i></div>
+              <h5 class="poppins-bold">Memberi wawasan, pemahaman, dan pelatihan tentang pendidikan karakter</h5>
+            </div>
+          </div>
+
+          <!-- Row bawah -->
+          <div class="col-md-4">
+            <div class="p-4 border rounded h-100">
+              <div class="mb-3 fs-1"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+              </svg></div>
+              <h5 class="poppins-bold">Memberikan wawasan, pemahaman, dan pelatihan sebagai mubaligh.</h5>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 border rounded h-100">
+              <div class="mb-3 fs-1"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-globe-asia-australia" viewBox="0 0 16 16">
+                <path d="m10.495 6.92 1.278-.619a.483.483 0 0 0 .126-.782c-.252-.244-.682-.139-.932.107-.23.226-.513.373-.816.53l-.102.054c-.338.178-.264.626.1.736a.48.48 0 0 0 .346-.027ZM7.741 9.808V9.78a.413.413 0 1 1 .783.183l-.22.443a.6.6 0 0 1-.12.167l-.193.185a.36.36 0 1 1-.5-.516l.112-.108a.45.45 0 0 0 .138-.326M5.672 12.5l.482.233A.386.386 0 1 0 6.32 12h-.416a.7.7 0 0 1-.419-.139l-.277-.206a.302.302 0 1 0-.298.52z"/>
+                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M1.612 10.867l.756-1.288a1 1 0 0 1 1.545-.225l1.074 1.005a.986.986 0 0 0 1.36-.011l.038-.037a.88.88 0 0 0 .26-.755c-.075-.548.37-1.033.92-1.099.728-.086 1.587-.324 1.728-.957.086-.386-.114-.83-.361-1.2-.207-.312 0-.8.374-.8.123 0 .24-.055.318-.15l.393-.474c.196-.237.491-.368.797-.403.554-.064 1.407-.277 1.583-.973.098-.391-.192-.634-.484-.88-.254-.212-.51-.426-.515-.741a7 7 0 0 1 3.425 7.692 1 1 0 0 0-.087-.063l-.316-.204a1 1 0 0 0-.977-.06l-.169.082a1 1 0 0 1-.741.051l-1.021-.329A1 1 0 0 0 11.205 9h-.165a1 1 0 0 0-.945.674l-.172.499a1 1 0 0 1-.404.514l-.802.518a1 1 0 0 0-.458.84v.455a1 1 0 0 0 1 1h.257a1 1 0 0 1 .542.16l.762.49a1 1 0 0 0 .283.126 7 7 0 0 1-9.49-3.409Z"/>
+              </svg></div>
+              <h5 class="poppins-bold">Memberikan wawasan dan pemahaman tentang nilai-nilai sosial,
+                budaya, politik, ekonomi, dan keamanan.</h5>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 border rounded h-100">
+              <div class="mb-3 fs-1"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+              </svg></div>
+              <h5 class="poppins-bold">Memberikan wawasan dan pemahaman tentang nilai-nilai perjuangan
+                Qur’an-Hadist</h5>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
   </main>
 
-  <!-- Footer -->
-  <footer style="background-color: var(--primary-color);">
-    <div class="container py-5">
-      <div class="row">
-
-        <!-- Logo + Motto -->
-        <div class="col-md-4 mb-4">
-          <div class="d-flex align-items-center">
-            <a href="index.html">
-              <img src="assets/img/white-ppm.svg" width="40" height="52" alt="PPM AFM Logo">
-            </a>
-            <span class="poppins-medium ms-2 mb-md-0 text-white">PPM AFM &copy; 2025</span>
-          </div>
-          <p class="text-white mt-3 poppins-light-italic small">"Sebaik-baiknya kalian adalah yang mengejar dunia dan akhirat."</p>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="col-md-4 mb-4">
-          <h6 class="text-white poppins-semibold">Quick Navigation</h6>
-          <ul class="list-unstyled poppins-regular">
-            <li><a href="about.html" class="text-white text-decoration-none">About AFM</a></li>
-            <li><a href="structure.html" class="text-white text-decoration-none">Structure</a></li>
-            <li><a href="facilities.html" class="text-white text-decoration-none">Facilities</a></li>
-            <li><a href="article.html" class="text-white text-decoration-none">Article</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact + Sosmed -->
-        <div class="col-md-4">
-          <h6 class="text-white poppins-semibold">Connect with Us</h6>
-          <p class="text-white mb-1 poppins-regular">Jl. Sawo No.33b, Pondok Cina, Depok</p>
-          <p class="text-white mb-1 poppins-regular">Phone Number: +62 858-8268-5011</p>
-          <p class="text-white mb-3 poppins-regular">Email: ppm.alfaqihmandiri[AT]gmail.com</p>
-          <div class="d-flex">
-            <a class="text-white me-3" href="https://www.linkedin.com/company/ppm-al-faqih-mandiri/">
-              <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
-            </a>
-            <a class="text-white me-3" href="https://www.instagram.com/ppm.afm/">
-              <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
-            </a>
-            <a class="text-white" href="https://www.youtube.com/channel/UCBnBDmVo4t0isb5loPTdU-A">
-              <i class="bi bi-youtube" style="font-size: 1.5rem;"></i>
-            </a>
-          </div>
-        </div>
-
-        <hr class="border-light mt-4">
-        <p class="text-center text-white small poppins-medium">Built with ❤️ by Mahasiswa AFM | Registered with the Ministry of Religion of the Republic of Indonesia.</p>
-
-      </div>      
-    </div>
-  </footer>
+  <!-- Footer PPM -->
+  <div id="footer-ppm"></div>
 
 
+  <!-- JavaScript -->
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Jquery JS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Lightbox2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+  <!-- Untuk layout album Masonry JS -->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+  <!-- ImagesLoaded -->
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 
   <!-- Main JS -->
   <script src="assets/main.js"></script>
 
-  <!-- Active Navbar Highlight Based on URL -->
   <script>
-    $(document).ready(function () {
-      const currentPath = window.location.pathname.split("/").pop();
-      $(".navbar .nav-link").each(function () {
-        const linkPath = $(this).attr("href");
-        if (linkPath === currentPath) {
-          $(".navbar .nav-link").removeClass("active");
-          $(this).addClass("active");
-        }
+    // Masonry setelah semua terload baru di inisialisasi
+    const $grid = $('.row[data-masonry]');
+    $grid.imagesLoaded(function () {
+      $grid.masonry({
+        itemSelector: '.col-sm-6', // karena kamu pakai grid ini
+        percentPosition: true
       });
     });
   </script>

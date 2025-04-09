@@ -1,26 +1,38 @@
 $(document).ready(function () {
 
-  // fungsi tentang active nav-link
-  $(".navbar .nav-link").on("click", function () {
+  // Ini fungsinya untuk load navbar.html ke dalam #navbar-ppm
+  $("#navbar-ppm").load("components/navbar.html", function () {
+    let currentPath = window.location.pathname;
+
+    // Ambil hanya bagian terakhir dari path (file name). Udah di tes case dengan banyak skenario
+    // termasuk kalo nanti ada subfolder di dalam folder untuk mencari index.html
+    currentPath = currentPath.endsWith("/") ? "index.html" : currentPath.split("/").pop();
+
+    // Bersihkan semua dulu. Tujuannya biar ketika load pertama semua navbar dan dropdown item ga aktif
     $(".navbar .nav-link").removeClass("active");
-    $(this).addClass("active");
-  });
+    $(".dropdown-item").removeClass("active");
 
-  // tambah class "active" ketika bertemu dropdown
-  const currentPath = window.location.pathname.split("/").pop();
-  $(".navbar .nav-link, .dropdown-item").each(function () {
-    const linkPath = $(this).attr("href");
-    if (linkPath === currentPath) {
-      $(".navbar .nav-link, .dropdown-item").removeClass("active");
-      $(this).addClass("active");
-
-      // Tambahkan class active ke parent nav-item jika ini dropdown-item
-      const parentDropdown = $(this).closest(".dropdown");
-      if (parentDropdown.length) {
-        parentDropdown.find(".nav-link.dropdown-toggle").addClass("active");
+    // 1. Aktifkan nav biasa
+    $(".navbar .nav-link").each(function () {
+      const linkPath = $(this).attr("href");
+      if (linkPath === currentPath) {
+        $(this).addClass("active");
       }
-    }
+    });
+
+    // 2. Aktifkan dropdown
+    $(".dropdown-item").each(function () {
+      const linkPath = $(this).attr("href");
+      if (linkPath === currentPath) {
+        $(this).addClass("active");
+        $(this).closest(".dropdown").find(".nav-link.dropdown-toggle").addClass("active");
+      }
+    });
+
   });
+
+  // Memunculkan footer disemua halaman
+  $("#footer-ppm").load("components/footer.html");
 
   // Animasi Fade down
   // $(window).scroll(function () {
@@ -33,7 +45,7 @@ $(document).ready(function () {
   //   }
   // });
 
-  // Animasi card
+  // Animasi card yang pop-up ketika kita nge scroll
   $(window).scroll(function () {
     const cards = document.querySelectorAll('.card');
     const screenPosition = window.innerHeight / 1.3;
@@ -47,7 +59,7 @@ $(document).ready(function () {
     });
   });
 
-  // fungsi tentang turn on bg di navbar dan adanya tombol back-to-top. Dan juga kasih shadow kalo scroll
+  // Fungsi tentang turn on background color di navbar dan adanya tombol back-to-top. Dan juga kasih shadow kalo scroll
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
     if (scroll > 50) {
@@ -59,33 +71,17 @@ $(document).ready(function () {
     }
     else {
       $(".navbar").css({
-        "background-color": "transparent", 
+        "background-color": "transparent",
         "box-shadow": "none",
       });
       $(".back-to-top").removeClass("active");
     }
   });
 
-  // fungsi tentang menutup navbar setelah klik a link
+  // Fungsi tentang menutup navbar setelah klik a link (offcanvas)
   $("#offcanvasDarkNavbar a").click(function () {
     if (!$(this).hasClass("dropdown-toggle")) {
       $('.offcanvas').offcanvas('hide');
     }
   });
-
-  // fungsi tentang navbar hide onscroll
-  // if ($(".smart-scroll").length > 0) {
-  //   var last_scroll_top = 0;
-  //   $(window).on("scroll", function () {
-  //     var scroll_top = $(this).scrollTop();
-  //     if (scroll_top < last_scroll_top) {
-  //       $(".smart-scroll").removeClass("scrolled-down").addClass("scrolled-up");
-  //     }
-  //     else {
-  //       $(".smart-scroll").removeClass("scrolled-up").addClass("scrolled-down");
-  //     }
-  //     last_scroll_top = scroll_top;
-  //   });
-  // }
-
 });

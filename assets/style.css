@@ -378,6 +378,24 @@ section {
   animation-play-state: paused;
 }
 
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.masonry-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.masonry-grid img:hover {
+  transform: scale(1.03);
+}
+
 /* Bagian Location PPM */
 @media (max-width: 767.98px) {
 
@@ -419,6 +437,18 @@ section {
   border-radius: 25px;
 }
 
+@media (max-width: 767.98px) {
+  .carousel-item img {
+    height: 50vh;
+    /* Responsive tinggi tergantung lebar viewport */
+  }
+
+  .map-item {
+    height: 50vh !important;
+  }
+
+}
+
 .carousel-overlay {
   position: absolute;
   top: 0;
@@ -436,9 +466,9 @@ section {
 
 /* Background full gambar */
 .total-mahasiswa {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/jumlah.JPG) fixed center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/jumlah.avif) center center;
   background-size: cover;
-  padding: 100px 0;
+  padding: 120px 0;
 }
 
 /* Button umum */
@@ -622,4 +652,52 @@ section .hero-video {
 #video-berjalan {
   max-height: 602px;
   object-fit: cover;
+}
+
+/* Semua CSS Artikel */
+.featured-post {
+  background-color: #f8f9fa;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.featured-post img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.blog-header {
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blog-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.blog-header p {
+  font-size: 1.25rem;
+  color: #6c757d;
 }
