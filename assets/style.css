@@ -857,6 +857,14 @@ section .hero-video {
   .facilitiesSwiper .swiper-slide {
     height: 250px;
   }
+
+  .hero-section h1 {
+    font-size: 32px;
+  }
+
+  .hero-section h2 {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -882,4 +890,31 @@ section .hero-video {
   .row.g-4 .col-md-4 {
     margin-bottom: 1.5rem;
   }
+}
+
+/* Bagian footer supaya ada elemen garis ppm */
+footer {
+  position: relative;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 40px 20px;
+}
+
+footer::before,
+footer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 6px; /* Ketebalan garis */
+  width: 50%; /* Setengah panjang */
+}
+
+footer::before {
+  left: 0; /* Garis di sisi kiri */
+  background-color: var(--card-left-color);
+}
+
+footer::after {
+  right: 0; /* Garis di sisi kanan */
+  background-color: var(--card-right-color);
 }
