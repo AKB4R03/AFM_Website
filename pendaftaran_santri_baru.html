@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pendaftaran Santri Baru - PPM AFM</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/logo-ppm.png" rel="icon" sizes="128x128">
+
+  <!-- Bootstrap & Third Parties CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" media="print"
+    onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    media="print" onload="this.media='all'">
+
+  <!-- Main CSS -->
+  <link href="assets/style.css" rel="stylesheet">
+
+  <!-- Sumber Font Website PPM -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
+
+  <style>
+    .hero-section {
+      position: relative;
+      background-image: url('https://ahxenhvigfansvzqkksq.supabase.co/storage/v1/object/public/websiteppm//mf1.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 150px 0;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-section .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .wave-separator {
+      margin-top: -100px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline-container {
+      position: relative;
+      padding-left: 40px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 30px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -40px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: var(--nav-link-color-active);
+      z-index: 1;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: -30px;
+      top: 20px;
+      width: 2px;
+      height: calc(100% - 20px);
+      background-color: #ddd;
+    }
+
+    .timeline-item:last-child::after {
+      display: none;
+    }
+
+    .registration-btn {
+      background-color: var(--nav-link-color-active);
+      color: #000;
+      font-weight: bold;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .registration-btn:hover {
+      background-color: var(--dark-nav-link-color-active);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-campus {
+      max-width: 80px;
+      height: auto;
+      margin: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-campus:hover {
+      transform: scale(1.1);
+    }
+
+    .card-facility {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+
+    .card-facility:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-icon {
+      background-color: var(--nav-link-color-active);
+      color: #000;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .qr-code {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigasi -->
+  <div id="navbar-ppm"></div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+      <div class="container text-center align-items-center position-relative" style="z-index: 999;">
+        <div class="row justify-content-center">
+          <div class="col-xl-8 fade-down-in">
+            <h1 class="fs-48 mb-3 text-white poppins-bold">PENDAFTARAN SANTRI BARU 2025</h1>
+            <h2 class="fs-24 text-white poppins-medium">Jadilah bagian dari generasi ulama yang profesional dan mandiri</h2>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Wave Separator
+  <div class="wave-separator">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#f5f5f5" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,229.3C384,235,480,213,576,181.3C672,149,768,107,864,117.3C960,128,1056,192,1152,218.7C1248,245,1344,235,1392,229.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </div> -->
+
+  <!-- Main Content -->
+  <main class="bg-light">
+    <div class="container py-5">
+      <!-- Registration & Selection Section -->
+      <div class="row mb-5">
+        <div class="col-lg-12">
+          <h2 class="poppins-bold mb-4">PENDAFTARAN & SELEKSI</h2>
+          <p class="badge mb-4" style="background-color: var(--nav-link-color-active); color: black;">17 April 2025 - 11 Juli 2025</p>
+
+          <h3 class="poppins-bold mb-3">ALUR PENDAFTARAN</h3>
+          <div class="timeline-container mb-5">
+            <div class="timeline-item">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <p class="poppins-regular mb-0">Mahasiswa yang sedang atau akan kuliah dan tertarik menjadi calon santri PPM dapat mendaftar melalui tautan <a href="https://bit.ly/RegistrasiCalonSantriBaruAFM2025" target="_blank" class="fw-bold">https://bit.ly/RegistrasiCalonSantriBaruAFM2025</a> atau scan QR code di bagian bawah halaman.</p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <p class="poppins-regular mb-0">Hasil seleksi administrasi dan info biaya pendaftaran akan diumumkan melalui <span class="fw-bold">Nomor Whatsapp Calon Santri</span>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <p class="poppins-regular mb-0">Setelah melalui proses pendaftaran dan seleksi pada rentang 17 April – 11 Juli 2025, calon santri yang lolos akan segera dihubungi oleh pihak PPM melalui WhatsApp.</p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <p class="poppins-regular mb-0">Calon santri yang dinyatakan lolos tahap 1 akan mengikuti seleksi tahap 2 pada tanggal 13 Juli 2025.</p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <p class="poppins-regular mb-0">Hasil seleksi akhir akan diumumkan pada tanggal 14 Juli 2025 melalui Nomor Whatsapp calon santri.</p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <p class="poppins-regular mb-0">Calon santri yang lolos seleksi tahap akhir, datang ke PPM mulai tanggal 14 Juli - 19 Juli 2025.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mb-5">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5RHqCFnCSvq5FmF1LzshFKr3O9OLeXokS6_uATN1m8vmszA/viewform" target="_blank" class="btn registration-btn">
+              <i class="bi bi-pencil-square me-2"></i>Daftar Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+
+            <!-- Program & Contact Section -->
+      <div class="row mb-5">
+        <!-- Program Section - Left Side -->
+        <div class="col-lg-6">
+          <h3 class="poppins-bold mb-3">PROGRAM PEMBINAAN</h3>
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill me-2" style="color: var(--nav-link-color-active);"></i> Kelas Dasar</li>
+                <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill me-2" style="color: var(--nav-link-color-active);"></i> Kelas Lambatan</li>
+                <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill me-2" style="color: var(--nav-link-color-active);"></i> Kelas Cepatan</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill me-2" style="color: var(--nav-link-color-active);"></i> Kelas Lanjutan</li>
+                <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill me-2" style="color: var(--nav-link-color-active);"></i> Kelas Bacaan</li>
+                <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill me-2" style="color: var(--nav-link-color-active);"></i> Sistem Kontrol Poin</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Section - Right Side -->
+        <div class="col-lg-6">
+          <h4 class="poppins-bold mb-3">CONTACT PERSON:</h4>
+          <div class="row">
+            <!-- Left column for phone numbers -->
+            <div class="col-md-6">
+              <!-- WA Adriyan -->
+              <div class="d-flex align-items-center mb-3">
+                <a href="https://wa.me/6285794953568" target="_blank" class="d-flex align-items-center text-decoration-none text-dark">
+                  <div class="contact-icon me-2">
+                    <i class="bi bi-whatsapp"></i>
+                  </div>
+                  <span class="poppins-medium">+62 857-9495-3568</span>
+                </a>
+              </div>
+        
+              <!-- WA Addien -->
+              <div class="d-flex align-items-center">
+                <a href="https://wa.me/6281227271744" target="_blank" class="d-flex align-items-center text-decoration-none text-dark">
+                  <div class="contact-icon me-2">
+                    <i class="bi bi-whatsapp"></i>
+                  </div>
+                  <span class="poppins-medium">+62 812-2727-1744</span>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Right column for Instagram -->
+            <div class="col-md-6">
+              <!-- IG @ppm.afm -->
+              <div class="d-flex align-items-center mb-3">
+                <a href="https://instagram.com/ppm.afm" target="_blank" class="d-flex align-items-center text-decoration-none text-dark">
+                  <div class="contact-icon me-2">
+                    <i class="bi bi-instagram"></i>
+                  </div>
+                  <span class="poppins-medium">@ppm.afm</span>
+                </a>
+              </div>
+        
+              <!-- IG @psb.afm -->
+              <div class="d-flex align-items-center">
+                <a href="https://instagram.com/psb.afm" target="_blank" class="d-flex align-items-center text-decoration-none text-dark">
+                  <div class="contact-icon me-2">
+                    <i class="bi bi-instagram"></i>
+                  </div>
+                  <span class="poppins-medium">@psb.afm</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mb-4">
+        <blockquote class="blockquote">
+          <p class="poppins-medium fst-italic">"Be The Teacher of The World"</p>
+        </blockquote>
+      </div>
+
+        <div class="row">
+            <div class="col-12">
+              <h3 class="poppins-bold mb-4 text-center">FASILITAS</h3>
+              <div class="row g-4">
+                <div class="col-md-3">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                      <i class="bi bi-building fs-1 mb-3" style="color: var(--nav-link-color-active);"></i>
+                      <h5 class="poppins-bold">Masjid AC 2 lantai</h5>
+                      <p class="poppins-regular text-muted small">Tempat ibadah dan pembelajaran yang nyaman</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                      <i class="bi bi-house-door fs-1 mb-3" style="color: var(--nav-link-color-active);"></i>
+                      <h5 class="poppins-bold">Basement</h5>
+                      <p class="poppins-regular text-muted small">Area multifungsi untuk berbagai kegiatan</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                      <i class="bi bi-easel fs-1 mb-3" style="color: var(--nav-link-color-active);"></i>
+                      <h5 class="poppins-bold">Aula Serbaguna</h5>
+                      <p class="poppins-regular text-muted small">Dilengkapi dengan UB Mart</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                      <i class="bi bi-building fs-1 mb-3" style="color: var(--nav-link-color-active);"></i>
+                      <h5 class="poppins-bold">Wisma Putra</h5>
+                      <p class="poppins-regular text-muted small">3 Lantai dengan fasilitas lengkap</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                      <i class="bi bi-building fs-1 mb-3" style="color: var(--nav-link-color-active);"></i>
+                      <h5 class="poppins-bold">Wisma Putri</h5>
+                      <p class="poppins-regular text-muted small">5 Lantai dengan fasilitas lengkap</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                      <i class="bi bi-journal fs-1 mb-3" style="color: var(--nav-link-color-active);"></i>
+                      <h5 class="poppins-bold">Lapangan Volly</h5>
+                      <p class="poppins-regular text-muted small">Area olahraga untuk kegiatan fisik</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                      <i class="bi bi-wifi fs-1 mb-3" style="color: var(--nav-link-color-active);"></i>
+                      <h5 class="poppins-bold">WiFi</h5>
+                      <p class="poppins-regular text-muted small">Koneksi internet untuk kegiatan belajar</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                      <i class="bi bi-shield-lock fs-1 mb-3" style="color: var(--nav-link-color-active);"></i>
+                      <h5 class="poppins-bold">Keamanan 24 Jam</h5>
+                      <p class="poppins-regular text-muted small">Dijaga oleh Senkom dan dilengkapi CCTV</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 16 16" fill="currentColor" style="color: var(--nav-link-color-active); margin-bottom: 1rem;">
+                        <rect x="1" y="1" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1" fill="none"/>
+                        <rect x="2" y="2" width="12" height="3" rx="1" fill="none" stroke="currentColor" stroke-width="0.7"/>
+                        <circle cx="8" cy="9" r="4" fill="none" stroke="currentColor" stroke-width="1"/>
+                        <circle cx="8" cy="9" r="3" fill="none" stroke="currentColor" stroke-width="0.7" stroke-dasharray="0.7,0.7"/>
+                        <circle cx="4" cy="3.5" r="0.7" fill="currentColor"/>
+                        <circle cx="6.5" cy="3.5" r="0.7" fill="currentColor"/>
+                        <circle cx="9" cy="3.5" r="0.7" fill="currentColor"/>
+                      </svg>
+                      <h5 class="poppins-bold">Mesin Cuci</h5>
+                      <p class="poppins-regular text-muted small">Area untuk mencuci dan menjemur pakaian</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                      <i class="bi bi-droplet fs-1 mb-3" style="color: var(--nav-link-color-active);"></i>
+                      <h5 class="poppins-bold">Air Minum Refill</h5>
+                      <p class="poppins-regular text-muted small">Tersedia untuk kebutuhan santri</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                      <i class="bi bi-person-bounding-box fs-1 mb-3" style="color: var(--nav-link-color-active);"></i>
+                      <h5 class="poppins-bold">Kamar 2 Orang</h5>
+                      <p class="poppins-regular text-muted small">Dengan kasur bertingkat yang nyaman</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                      <i class="bi bi-basket fs-1 mb-3" style="color: var(--nav-link-color-active);"></i>
+                      <h5 class="poppins-bold">Makan 2X sehari</h5>
+                      <p class="poppins-regular text-muted small">Kebutuhan makanan santri terjamin</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+  <!-- Footer PPM -->
+  <div id="footer-ppm"></div>
+
+  <!-- JavaScript -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Jquery JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/main.js"></script>
+  
+  <!-- Page Specific JS -->
+  <script src="assets/js/pendaftaran_santri_baru.js"></script>
+
+</body>
+
+</html>

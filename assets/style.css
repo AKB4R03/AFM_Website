@@ -701,3 +701,118 @@ section .hero-video {
   font-size: 1.25rem;
   color: #6c757d;
 }
+
+/* Facility page specific styles */
+.facilitiesSwiper .swiper-slide {
+  position: relative;
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 300px;
+}
+
+.facilitiesSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.facilitiesSwiper .swiper-slide:hover img {
+  transform: scale(1.05);
+}
+
+.facility-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.facility-image-container {
+  height: 350px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.facility-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.facility-image-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Badge styling for facilities features */
+.badge {
+  font-weight: 500;
+  padding: 8px 12px;
+  background-color: var(--nav-link-color-active, #A2D812);
+  color: black;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+/* CTA Section styling */
+.cta-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+  border-radius: 8px;
+}
+
+/* Button styling to match site colors */
+.btn-primary {
+  background-color: var(--nav-link-color-active);
+  color: black;
+  border-color: var(--nav-link-color-active);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-nav-link-color-active);
+  color: black;
+  border-color: var(--dark-nav-link-color-active);
+  transition: 0.3s ease-in-out;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-next, 
+.swiper-button-prev {
+  color: var(--nav-link-color-active) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--nav-link-color-active) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .facility-image-container {
+    height: 250px;
+    margin-bottom: 20px;
+  }
+  
+  .facilitiesSwiper .swiper-slide {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .facility-image-container {
+    height: 200px;
+  }
+  
+  .facilitiesSwiper .swiper-slide {
+    height: 200px;
+  }
+}
