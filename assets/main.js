@@ -84,4 +84,38 @@ $(document).ready(function () {
       $('.offcanvas').offcanvas('hide');
     }
   });
+<<<<<<< HEAD
+=======
+
+  // Untuk bisa swipe pada carousel di page index.html
+  const carousel = document.querySelector('#carouselExampleSlidesOnly .carousel-inner');
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
+
+  carousel.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+    carousel.style.cursor = 'grabbing';
+  });
+
+  carousel.addEventListener('mouseleave', () => {
+    isDragging = false;
+    carousel.style.cursor = 'grab';
+  });
+
+  carousel.addEventListener('mouseup', () => {
+    isDragging = false;
+    carousel.style.cursor = 'grab';
+  });
+
+  carousel.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust scroll speed
+    carousel.scrollLeft = scrollLeft - walk;
+  });
+>>>>>>> 1f924fe (perubahan baru)
 });
