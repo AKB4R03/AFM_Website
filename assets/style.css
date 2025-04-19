@@ -180,6 +180,10 @@ body {
   background-color: var(--primary-color) !important;
 }
 
+.text-align-justify {
+  text-align: justify;
+}
+
 /* Active nav-link style */
 .navbar .nav-link.active {
   background-color: var(--nav-link-color-active);
@@ -415,18 +419,17 @@ section {
 }
 
 .icon-circle {
-  background-color: var(--nav-link-color-active);
-  /* Semi-transparent white */
-  padding: 8px;
-  border-radius: 50%;
-  color: white;
-  /* Atur warna ikon */
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(0, 123, 255, 0.1); /* Warna latar belakang ikon */
+}
+
+.carousel-inner {
+  cursor: grab;
 }
 
 .carousel-item img {
@@ -500,6 +503,16 @@ section {
 .card.pop-up {
   opacity: 1;
   transform: scale(1);
+}
+
+.card h5 {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #6c757d;
 }
 
 .header-text {
@@ -814,5 +827,20 @@ section .hero-video {
   
   .facilitiesSwiper .swiper-slide {
     height: 200px;
+  }
+}
+
+/* Center the last card in the row when using 3 columns */
+@media (min-width: 768px) {
+  .row.g-4 .col-md-4:nth-child(3) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Adjust spacing for mobile */
+@media (max-width: 767.98px) {
+  .row.g-4 .col-md-4 {
+    margin-bottom: 1.5rem;
   }
 }
