@@ -510,6 +510,17 @@ section {
   margin-top: 1rem;
 }
 
+/* Card PPM */
+.card-ppm div .card-body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+
+}
+
+.card-ppm div .card-text {
+  color: var(--secondary-color);
+}
+
 .card p {
   font-size: 0.95rem;
   color: #6c757d;
