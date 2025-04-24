@@ -992,3 +992,19 @@ footer::after {
   align-items: center;
   justify-content: center;
 }
+
+
+.hero-section {
+  position: relative;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  color: white;
+  text-align: center;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
