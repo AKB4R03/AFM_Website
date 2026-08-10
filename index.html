@@ -1,494 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>PPM AFM</title>
 
-    <!-- Favicons -->
-    <link href="assets/img/logo-ppm.png" rel="icon" sizes="128x128" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PPM AFM</title>
 
-    <!-- Bootstrap & Third Parties CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-      media="print"
-      onload="this.media='all'"
-    />
+  <!-- Favicons -->
+  <link href="assets/img/logo-ppm.png" rel="icon" sizes="128x128" />
 
-    <!-- Main CSS -->
-    <link
-      href="assets/style.css"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
+  <!-- Bootstrap & Third Parties CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" media="print"
+    onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    media="print" onload="this.media='all'" />
 
-    <!-- Sumber Font Website PPM -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-  </head>
+  <!-- Main CSS -->
+  <link href="assets/style.css" rel="stylesheet" media="print" onload="this.media='all'" />
 
-  <body data-bs-spy="scroll" data-bs-target="#navbar-example">
-    <!-- Navigasi -->
-    <div id="navbar-ppm"></div>
+  <!-- Sumber Font Website PPM -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'" />
+</head>
 
-    <!-- Nama animasinya animated-section dan taronya di <div> di bawah inii (ada di style.css) -->
-    <!-- class="animated-section" -->
-    <!-- Landing -->
-    <div>
-      <section
-        class="d-flex justify-content-center position-relative flex-column"
-        style="height: 100vh"
-        id="home"
-      >
-        <div class="overlay"></div>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+  <!-- Navigasi -->
+  <div id="navbar-ppm"></div>
 
-        <!-- Video Berjalan -->
-        <video
-          class="hero-video"
-          id="video-berjalan"
-          playsinline="playsinline"
-          autoplay="autoplay"
-          muted="muted"
-          loop="loop"
-          preload="metadata"
-          poster="assets/img/beranda/beranda.png"
-        >
-          <source
-            src="https://drive.bayar.id/s/M4AXczOCzRPKt87/download"
-            type="video/webm"
-          />
-        </video>
+  <!-- Nama animasinya animated-section dan taronya di <div> di bawah inii (ada di style.css) -->
+  <!-- class="animated-section" -->
+  <!-- Landing -->
+  <div>
+    <section class="d-flex justify-content-center position-relative flex-column" style="height: 100vh" id="home">
+      <div class="overlay"></div>
 
-        <!-- Video Text -->
-        <div
-          class="container text-center align-items-center position-relative"
-          style="z-index: 999"
-        >
-          <div class="row justify-content-center hero-section">
-            <div class="col-xl-8">
-              <!-- fade-down-in -->
-              <h1 class="fs-48 mb-3 text-white poppins-bold">
-                Pondok Pesantren Mahasiswa Al-Faqih Mandiri
-              </h1>
-              <h2 class="fs-24 text-white poppins-medium">
-                Tempat pembinaan mahasiswa untuk tumbuh dalam akhlak, ilmu, dan
-                kontribusi nyata bagi masyarakat.
-              </h2>
-            </div>
+      <!-- Video Berjalan -->
+      <video class="hero-video" id="video-berjalan" playsinline="playsinline" autoplay="autoplay" muted="muted"
+        loop="loop" preload="metadata" poster="assets/img/beranda/beranda.png">
+        <source src="https://drive.bayar.id/s/M4AXczOCzRPKt87/download" type="video/webm" />
+      </video>
+
+      <!-- Video Text -->
+      <div class="container text-center align-items-center position-relative" style="z-index: 999">
+        <div class="row justify-content-center hero-section">
+          <div class="col-xl-8">
+            <!-- fade-down-in -->
+            <h1 class="fs-48 mb-3 text-white poppins-bold">
+              Pondok Pesantren Mahasiswa Al-Faqih Mandiri
+            </h1>
+            <h2 class="fs-24 text-white poppins-medium">
+              Tempat pembinaan mahasiswa untuk tumbuh dalam akhlak, ilmu, dan
+              kontribusi nyata bagi masyarakat.
+            </h2>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+  </div>
 
-    <!-- Contents -->
-    <main>
-      <!-- Activities Section -->
+  <!-- Contents -->
+  <main>
+    <!-- Activities Section -->
 
-      <!-- Nama animasinya fade-down-in-on-scroll (ada di style.css) -->
-      <section
-        class="d-flex"
-        id="aboutme"
-        style="
+    <!-- Nama animasinya fade-down-in-on-scroll (ada di style.css) -->
+    <section class="d-flex" id="aboutme" style="
           background-color: #f7f7f7;
           border-radius: 0 0 50px 50px;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
             0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        "
-      >
-        <div class="container mt-responsive m-auto justify-content-center">
-          <div class="mb-5" style="text-align: center">
-            <h3 class="poppins-bold header-text">Tentang PPM AFM</h3>
-          </div>
-
-          <div class="row g-4">
-            <!-- Gambar Selama PPM -->
-            <div class="col-md-7">
-              <div
-                id="carouselExampleSlidesOnly"
-                class="carousel slide"
-                data-bs-ride="carousel"
-              >
-                <div
-                  class="carousel-inner shadow-lg"
-                  style="border-radius: 25px"
-                >
-                  <div class="carousel-overlay"></div>
-
-                  <div class="carousel-item active">
-                    <img
-                      src="assets/img/kegiatan/ngaji-2.JPG"
-                      loading="lazy"
-                      sizes="(max-width: 600px) 100vw, 50vw"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="assets/img/kegiatan/ngaji.JPG"
-                      loading="lazy"
-                      sizes="(max-width: 600px) 100vw, 50vw"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="assets/img/kegiatan/tahajud.jpeg"
-                      loading="lazy"
-                      sizes="(max-width: 600px) 100vw, 50vw"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="assets/img/kegiatan/asad.jpeg"
-                      loading="lazy"
-                      sizes="(max-width: 600px) 100vw, 50vw"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="assets/img/kegiatan/asad-2.jpeg"
-                      loading="lazy"
-                      sizes="(max-width: 600px) 100vw, 50vw"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="assets/img/kegiatan/totalan.jpeg"
-                      loading="lazy"
-                      sizes="(max-width: 600px) 100vw, 50vw"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="assets/img/kegiatan/totalan-2.jpeg"
-                      loading="lazy"
-                      sizes="(max-width: 600px) 100vw, 50vw"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="assets/img/kegiatan/wisuda.jpeg"
-                      loading="lazy"
-                      sizes="(max-width: 600px) 100vw, 50vw"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="assets/img/kegiatan/kegiatan-9.avif"
-                      loading="lazy"
-                      sizes="(max-width: 600px) 100vw, 50vw"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tulisan Kegiatan PPM -->
-            <div class="col-md-5">
-              <p class="poppins-regular text-align-justify">
-                Pondok Pesantren Mahasiswa (PPM) Al-Faqih Mandiri (AFM) adalah
-                pondok pesantren bagi para mahasiswa/i yang berkuliah di Depok
-                dan sekitarnya serta memiliki tujuan untuk mencetak sarjana yang
-                profesional religius serta berperan aktif dalam perjuangan dan
-                dakwah.
-              </p>
-
-              <h5 class="poppins-semibold">🕌 Kegiatan PPM AFM:</h5>
-              <ul class="poppins-regular">
-                <li>
-                  Sesi Al-Quran dan Hadits dengan Guru setelah Subuh dan Setelah
-                  Isya (2x sehari)
-                </li>
-                <li>Ibadah Solat Tahajjud Setiap Selasa dan Jumat Malam</li>
-                <li>Nasihat Ba’da Maghrib setiap hari Senin dan Rabu</li>
-                <li>Piket Totalan (Bersih-bersih Asrama) Setiap Hari Sabtu</li>
-                <li>Kegiatan silat ASAD</li>
-                <li>Dan lainnya</li>
-              </ul>
-              <div class="text-center mt-4">
-                <p class="poppins-regular">Ingin Tahu PPM AFM Lebih Banyak?</p>
-                <a href="about.html" class="btn btn-primary poppins-medium"
-                  >Lihat Lebih Banyak di Tentang AFM</a
-                >
-              </div>
-            </div>
-          </div>
+        ">
+      <div class="container mt-responsive m-auto justify-content-center">
+        <div class="mb-5" style="text-align: center">
+          <h3 class="poppins-bold header-text">Tentang PPM AFM</h3>
         </div>
-      </section>
 
-      <!-- Nearby Campuses Section -->
-      <section class="d-flex" id="nearest">
-        <div class="container">
-          <div style="text-align: center">
-            <h3 class="poppins-bold header-text">
-              Kampus-kampus Ternama Sekitar
-            </h3>
-          </div>
+        <div class="row g-4">
+          <!-- Gambar Selama PPM -->
+          <div class="col-md-7">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner shadow-lg" style="border-radius: 25px">
+                <div class="carousel-overlay"></div>
 
-          <div class="position-relative d-flex overflow-x-hidden py-lg-4 pt-4">
-            <div class="d-flex gap-3">
-              <div class="marquee-content" id="marqueeContent">
-                <div class="marquee-track">
-                  <!-- isi item berulang nearest campus -->
-                  <img
-                    class="img-fluid"
-                    width="150"
-                    height="163"
-                    src="assets/img/univ-1.png"
-                    alt=""
-                  />
-                  <img
-                    class="img-fluid"
-                    width="150"
-                    height="163"
-                    src="assets/img/univ-2.png"
-                    alt=""
-                  />
-                  <img
-                    class="img-fluid"
-                    width="150"
-                    height="163"
-                    src="assets/img/univ-3.png"
-                    alt=""
-                  />
-                  <img
-                    class="img-fluid"
-                    width="150"
-                    height="163"
-                    src="assets/img/univ-4.png"
-                    alt=""
-                  />
-                  <img
-                    class="img-fluid"
-                    width="150"
-                    height="163"
-                    src="assets/img/univ-5.png"
-                    alt=""
-                  />
-                  <img
-                    class="img-fluid"
-                    width="150"
-                    height="163"
-                    src="assets/img/univ-6.png"
-                    alt=""
-                  />
-                  <img
-                    class="img-fluid"
-                    width="150"
-                    height="163"
-                    src="assets/img/univ-7.png"
-                    alt=""
-                  />
-                  <img
-                    class="img-fluid"
-                    width="150"
-                    height="163"
-                    src="assets/img/univ-8.png"
-                    alt=""
-                  />
+                <div class="carousel-item active">
+                  <img src="assets/img/kegiatan/ngaji-2.JPG" loading="lazy" sizes="(max-width: 600px) 100vw, 50vw"
+                    class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/kegiatan/ngaji.JPG" loading="lazy" sizes="(max-width: 600px) 100vw, 50vw"
+                    class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/kegiatan/tahajud.jpeg" loading="lazy" sizes="(max-width: 600px) 100vw, 50vw"
+                    class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/kegiatan/asad.jpeg" loading="lazy" sizes="(max-width: 600px) 100vw, 50vw"
+                    class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/kegiatan/asad-2.jpeg" loading="lazy" sizes="(max-width: 600px) 100vw, 50vw"
+                    class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/kegiatan/totalan.jpeg" loading="lazy" sizes="(max-width: 600px) 100vw, 50vw"
+                    class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/kegiatan/totalan-2.jpeg" loading="lazy" sizes="(max-width: 600px) 100vw, 50vw"
+                    class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/kegiatan/wisuda.jpeg" loading="lazy" sizes="(max-width: 600px) 100vw, 50vw"
+                    class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/kegiatan/kegiatan-9.avif" loading="lazy" sizes="(max-width: 600px) 100vw, 50vw"
+                    class="d-block w-100" alt="..." />
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- Total Mahasiswa and Degur -->
-      <section
-        class="total-mahasiswa d-flex text-center align-items-center"
-        id="totalmahasiswa"
-      >
-        <div class="container">
-          <div class="row text-white justify-content-center">
-            <!-- Dewan Guru -->
-            <div class="col-6 col-md-3 mb-4">
-              <i class="bi bi-mortarboard-fill"></i>
-              <div class="mb-2 fs-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="45"
-                  height="45"
-                  fill="currentColor"
-                  class="bi bi-mortarboard-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z"
-                  />
-                  <path
-                    d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z"
-                  />
-                </svg>
+          <!-- Tulisan Kegiatan PPM -->
+          <div class="col-md-5">
+            <p class="poppins-regular text-align-justify">
+              Pondok Pesantren Mahasiswa (PPM) Al-Faqih Mandiri (AFM) adalah
+              pondok pesantren bagi para mahasiswa/i yang berkuliah di Depok
+              dan sekitarnya serta memiliki tujuan untuk mencetak sarjana yang
+              profesional religius serta berperan aktif dalam perjuangan dan
+              dakwah.
+            </p>
+
+            <h5 class="poppins-semibold">🕌 Kegiatan PPM AFM:</h5>
+            <ul class="poppins-regular">
+              <li>
+                Sesi Al-Quran dan Hadits dengan Guru setelah Subuh dan Setelah
+                Isya (2x sehari)
+              </li>
+              <li>Ibadah Solat Tahajjud Setiap Selasa dan Jumat Malam</li>
+              <li>Nasihat Ba’da Maghrib setiap hari Senin dan Rabu</li>
+              <li>Piket Totalan (Bersih-bersih Asrama) Setiap Hari Sabtu</li>
+              <li>kegiatan pencak silat persinas asad</li>
+              <li>Dan lainnya</li>
+            </ul>
+            <div class="text-center mt-4">
+              <p class="poppins-regular">Ingin Tahu PPM AFM Lebih Banyak?</p>
+              <a href="about.html" class="btn btn-primary poppins-medium">Lihat Lebih Banyak di Tentang AFM</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nearby Campuses Section -->
+    <section class="d-flex" id="nearest">
+      <div class="container">
+        <div style="text-align: center">
+          <h3 class="poppins-bold header-text">
+            Kampus-kampus Ternama Sekitar
+          </h3>
+        </div>
+
+        <div class="position-relative d-flex overflow-x-hidden py-lg-4 pt-4">
+          <div class="d-flex gap-3">
+            <div class="marquee-content" id="marqueeContent">
+              <div class="marquee-track">
+                <!-- isi item berulang nearest campus -->
+                <img class="img-fluid" width="150" height="163" src="assets/img/univ-1.png" alt="" />
+                <img class="img-fluid" width="150" height="163" src="assets/img/univ-2.png" alt="" />
+                <img class="img-fluid" width="150" height="163" src="assets/img/univ-3.png" alt="" />
+                <img class="img-fluid" width="150" height="163" src="assets/img/univ-4.png" alt="" />
+                <img class="img-fluid" width="150" height="163" src="assets/img/univ-5.png" alt="" />
+                <img class="img-fluid" width="150" height="163" src="assets/img/univ-6.png" alt="" />
+                <img class="img-fluid" width="150" height="163" src="assets/img/univ-7.png" alt="" />
+                <img class="img-fluid" width="150" height="163" src="assets/img/univ-8.png" alt="" />
               </div>
-              <h4 class="fs-24 poppins-bold">5</h4>
-              <p class="fs-20 poppins-semibold mb-0">Dewan Guru</p>
-            </div>
-
-            <!-- Total Mahasiswa/i -->
-            <div class="col-6 col-md-3 mb-4">
-              <i class="bi bi-people-fill fs-1 mb-2 d-block"></i>
-              <h4 class="fs-24 poppins-bold">92</h4>
-              <p class="fs-20 poppins-semibold mb-0">Total Santri</p>
-            </div>
-
-            <!-- Mahasiswa -->
-            <div class="col-6 col-md-3 mb-4">
-              <i class="bi bi-person-fill fs-1 mb-2 d-block"></i>
-
-              <!-- Data dari Aloha kemarin ada 58 -->
-              <h4 class="fs-24 poppins-bold">44</h4>
-              <p class="fs-20 poppins-semibold mb-0">Santriwan</p>
-            </div>
-
-            <!-- Mahasiswi -->
-            <div class="col-6 col-md-3 mb-4">
-              <i class="bi bi-person-fill fs-1 mb-2 d-block"></i>
-
-              <!-- Data dari Aloha kemarin ada 57 -->
-              <h4 class="fs-24 poppins-bold">48</h4>
-              <p class="fs-20 poppins-semibold mb-0">Santriwati</p>
-            </div>
-
-            <div class="col-12">
-              <p
-                class="text-white-50 small text-center poppins-semibold-italic"
-              >
-                *Data per Januari 2025
-              </p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Location PPM AFM Section -->
-      <section class="d-flex">
-        <div class="container">
-          <div class="mb-5" style="text-align: center">
-            <h3 class="poppins-bold header-text">Lokasi Strategis Kami</h3>
+    <!-- Total Mahasiswa and Degur -->
+    <section class="total-mahasiswa d-flex text-center align-items-center" id="totalmahasiswa">
+      <div class="container">
+        <div class="row text-white justify-content-center">
+          <!-- Dewan Guru -->
+          <div class="col-6 col-md-3 mb-4">
+            <i class="bi bi-mortarboard-fill"></i>
+            <div class="mb-2 fs-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor"
+                class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
+                <path
+                  d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z" />
+                <path
+                  d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z" />
+              </svg>
+            </div>
+            <h4 class="fs-24 poppins-bold">5</h4>
+            <p class="fs-20 poppins-semibold mb-0">Dewan Guru</p>
           </div>
 
-          <div class="row g-4 align-items-stretch">
-            <!-- Kontak PPM Kiri -->
-            <div
-              class="col-md-5 text-white p-4 rounded-4 shadow location-box"
-              style="background-color: var(--primary-color)"
-            >
-              <h5 class="poppins-bold mb-3 align-items-center">
-                <i
-                  class="bi bi-geo-alt-fill me-2 green-light-color icon-circle"
-                ></i
-                >Alamat:
-              </h5>
-              <p class="poppins-medium">
-                Jl. Sawo No.33b, Pondok Cina, Kecamatan Beji, Kota Depok, Jawa
-                Barat 16424
-              </p>
+          <!-- Total Mahasiswa/i -->
+          <div class="col-6 col-md-3 mb-4">
+            <i class="bi bi-people-fill fs-1 mb-2 d-block"></i>
+            <h4 class="fs-24 poppins-bold">112</h4>
+            <p class="fs-20 poppins-semibold mb-0">Total Santri</p>
+          </div>
 
-              <h5 class="poppins-bold mt-4 mb-3">
-                <i
-                  class="bi bi-envelope-fill me-2 green-light-color icon-circle"
-                ></i
-                >Email:
-              </h5>
-              <p class="poppins-medium">ppm.alfaqihmandiri[AT]gmail.com</p>
+          <!-- Mahasiswa -->
+          <div class="col-6 col-md-3 mb-4">
+            <i class="bi bi-person-fill fs-1 mb-2 d-block"></i>
 
-              <h5 class="poppins-bold mt-4 mb-3">
-                <i
-                  class="bi bi-telephone-fill me-2 green-light-color icon-circle"
-                ></i
-                >No. Telepon:
-              </h5>
-              <p class="poppins-medium">+62 858-8268-5011</p>
+            <!-- Data dari Aloha kemarin ada 58 -->
+            <h4 class="fs-24 poppins-bold">57</h4>
+            <p class="fs-20 poppins-semibold mb-0">Santriwan</p>
+          </div>
 
-              <h5 class="poppins-bold mt-4 mb-3">
-                <i
-                  class="bi bi-clock-fill me-2 green-light-color icon-circle"
-                ></i
-                >Jam Operasi:
-              </h5>
-              <p class="poppins-medium">Senin - Sabtu: 06.00 - 22.00</p>
-            </div>
+          <!-- Mahasiswi -->
+          <div class="col-6 col-md-3 mb-4">
+            <i class="bi bi-person-fill fs-1 mb-2 d-block"></i>
 
-            <!-- Peta PPM Kanan -->
-            <div class="col-md-7 map-box">
-              <iframe
-                loading="lazy"
-                title="Landing Video PPM"
-                class="map-item rounded-4"
-                width="100%"
-                height="100%"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.241627011433!2d106.8302453883966!3d-6.362766414862501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eda10e3924d7%3A0xae90911f67ac448f!2sAl%20Faqih%20Mandiri%20Islamic%20Boarding%20School!5e0!3m2!1sen!2sid!4v1742930567075!5m2!1sen!2sid"
-                style="border: 0"
-                allowfullscreen=""
-                referrerpolicy="no-referrer-when-downgrade"
-              >
-              </iframe>
-            </div>
+            <!-- Data dari Aloha kemarin ada 57 -->
+            <h4 class="fs-24 poppins-bold">55</h4>
+            <p class="fs-20 poppins-semibold mb-0">Santriwati</p>
+          </div>
+
+          <div class="col-12">
+            <p class="text-white-50 small text-center poppins-semibold-italic">
+              *Data per Januari 2025
+            </p>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <!-- Footer PPM -->
-    <div id="footer-ppm"></div>
+    <!-- Location PPM AFM Section -->
+    <section class="d-flex">
+      <div class="container">
+        <div class="mb-5" style="text-align: center">
+          <h3 class="poppins-bold header-text">Lokasi Strategis Kami</h3>
+        </div>
 
-    <!-- JavaScript -->
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="row g-4 align-items-stretch">
+          <!-- Kontak PPM Kiri -->
+          <div class="col-md-5 text-white p-4 rounded-4 shadow location-box"
+            style="background-color: var(--primary-color)">
+            <h5 class="poppins-bold mb-3 align-items-center">
+              <i class="bi bi-geo-alt-fill me-2 green-light-color icon-circle"></i>Alamat:
+            </h5>
+            <p class="poppins-medium">
+              Jl. Sawo No.33b, Pondok Cina, Kecamatan Beji, Kota Depok, Jawa
+              Barat 16424
+            </p>
 
-    <!-- Jquery JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <h5 class="poppins-bold mt-4 mb-3">
+              <i class="bi bi-envelope-fill me-2 green-light-color icon-circle"></i>Email:
+            </h5>
+            <p class="poppins-medium">ppm.alfaqihmandiri[AT]gmail.com</p>
 
-    <!-- Main JS -->
-    <script src="assets/main.js"></script>
+            <h5 class="poppins-bold mt-4 mb-3">
+              <i class="bi bi-telephone-fill me-2 green-light-color icon-circle"></i>No. Telepon:
+            </h5>
+            <p class="poppins-medium">+62 858-8268-5011</p>
 
-    <script>
-      // Semuanya ini adalah script untuk mengatur navbar ketika file sudah ready
-      $(document).ready(function () {
-        // Ini fungsinya untuk meng-clone isi dari .marquee-track (yang ada di nearest campus)
-        // ke dalam #marqueeContent
-        // Jadi nanti isi dari .marquee-track akan diulang 2x
-        const track = document.querySelector(".marquee-track");
-        if (track) {
-          track.innerHTML += track.innerHTML;
-        }
+            <h5 class="poppins-bold mt-4 mb-3">
+              <i class="bi bi-clock-fill me-2 green-light-color icon-circle"></i>Jam Operasi:
+            </h5>
+            <p class="poppins-medium">Senin - Sabtu: 06.00 - 22.00</p>
+          </div>
 
-        // Atau bisa juga pakai jQuery
-        // const $marqueeContent = $('#marqueeContent');
-        const $track = $(".marquee-track");
-        const $clone = $track.clone();
-        $("#marqueeContent").append($clone);
-      });
-    </script>
-  </body>
+          <!-- Peta PPM Kanan -->
+          <div class="col-md-7 map-box">
+            <iframe loading="lazy" title="Landing Video PPM" class="map-item rounded-4" width="100%" height="100%"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.241627011433!2d106.8302453883966!3d-6.362766414862501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eda10e3924d7%3A0xae90911f67ac448f!2sAl%20Faqih%20Mandiri%20Islamic%20Boarding%20School!5e0!3m2!1sen!2sid!4v1742930567075!5m2!1sen!2sid"
+              style="border: 0" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer PPM -->
+  <div id="footer-ppm"></div>
+
+  <!-- JavaScript -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Jquery JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/main.js"></script>
+
+  <script>
+    // Semuanya ini adalah script untuk mengatur navbar ketika file sudah ready
+    $(document).ready(function () {
+      // Ini fungsinya untuk meng-clone isi dari .marquee-track (yang ada di nearest campus)
+      // ke dalam #marqueeContent
+      // Jadi nanti isi dari .marquee-track akan diulang 2x
+      const track = document.querySelector(".marquee-track");
+      if (track) {
+        track.innerHTML += track.innerHTML;
+      }
+
+      // Atau bisa juga pakai jQuery
+      // const $marqueeContent = $('#marqueeContent');
+      const $track = $(".marquee-track");
+      const $clone = $track.clone();
+      $("#marqueeContent").append($clone);
+    });
+  </script>
+</body>
+
 </html>
