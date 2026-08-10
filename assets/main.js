@@ -1,14 +1,17 @@
 $(document).ready(function () {
 
-  // Ini fungsinya untuk load navbar.html ke dalam #navbar-ppm
+  // Tampilkan skeleton loader sebelum komponen di-load
+  $("#navbar-ppm").html('<div style="height:56px; background:#0c2000; width:100%;"></div>');
+  $("#footer-ppm").html('<div style="height:200px; background:#0c2000; width:100%;"></div>');
+
+  // Load navbar.html ke dalam #navbar-ppm
   $("#navbar-ppm").load("components/navbar.html", function () {
     let currentPath = window.location.pathname;
 
-    // Ambil hanya bagian terakhir dari path (file name). Udah di tes case dengan banyak skenario
-    // termasuk kalo nanti ada subfolder di dalam folder untuk mencari index.html
+    // Ambil hanya bagian terakhir dari path (file name)
     currentPath = currentPath.endsWith("/") ? "index.html" : currentPath.split("/").pop();
 
-    // Bersihkan semua dulu. Tujuannya biar ketika load pertama semua navbar dan dropdown item ga aktif
+    // Bersihkan semua dulu
     $(".navbar .nav-link").removeClass("active");
     $(".dropdown-item").removeClass("active");
 
@@ -31,19 +34,8 @@ $(document).ready(function () {
 
   });
 
-  // Memunculkan footer disemua halaman
+  // Load footer.html ke dalam #footer-ppm
   $("#footer-ppm").load("components/footer.html");
-
-  // Animasi Fade down
-  // $(window).scroll(function () {
-  //   const element = document.querySelector('.fade-down-in-on-scroll');
-  //   const elementPosition = element.getBoundingClientRect().top;
-  //   const screenPosition = window.innerHeight / 1.3;
-
-  //   if (elementPosition < screenPosition) {
-  //     element.classList.add('animate');
-  //   }
-  // });
 
   // Animasi card yang pop-up ketika kita nge scroll
   $(window).scroll(function () {
@@ -59,7 +51,7 @@ $(document).ready(function () {
     });
   });
 
-  // Fungsi tentang turn on background color di navbar dan adanya tombol back-to-top. Dan juga kasih shadow kalo scroll
+  // Navbar background & back-to-top button on scroll
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
     if (scroll > 50) {
@@ -78,7 +70,7 @@ $(document).ready(function () {
     }
   });
 
-  // Fungsi tentang menutup navbar setelah klik a link (offcanvas)
+  // Menutup navbar setelah klik a link (offcanvas)
   $("#offcanvasDarkNavbar a").click(function () {
     if (!$(this).hasClass("dropdown-toggle")) {
       $('.offcanvas').offcanvas('hide');
